@@ -19,7 +19,7 @@ class Customer:
         Інші визначені методи пов'язані з взаємодією з БД. Назви говорять самі за себе.
     """
 
-    def __init__(self, master):
+    def __init__(self, master=None):
         # master - це кореневий фрейм, який містить усі інші елементи
         self.master = master
 

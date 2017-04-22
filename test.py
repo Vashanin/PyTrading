@@ -9,10 +9,10 @@ with db:
     conn.execute("DROP TABLE Commodities")
     db.commit()
 
-    conn.execute("CREATE TABLE Commodities (Id int, Name TEXT, Amount int, Price TEXT, ProviderId int)")
+    conn.execute("CREATE TABLE Commodities (Id int, Name TEXT, Amount int, Price float, ProviderId int)")
     db.commit()
 
-    good = (1, "Moto G7", 100, "100$", 1)
+    good = (1, "Moto G7", 100, 100.0, 1)
 
     conn.execute("INSERT INTO Commodities (Id, Name, Amount, Price, ProviderId) VALUES (?, ?, ?, ?, ?)", good)
 

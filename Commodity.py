@@ -20,7 +20,7 @@ class Commodity:
         Інші визначені методи пов'язані з взаємодією з БД. Назви говорять самі за себе.
     """
 
-    def __init__(self, master):
+    def __init__(self, master=None):
         # master - це кореневий фрейм, який містить усі інші елементи
         self.master = master
 
@@ -79,7 +79,7 @@ class Commodity:
             Label(frame, text="{:>12}".format("Кількість"), font=("Courier", 12)).grid(row=2, column=0)
             description_form.grid(row=2, column=1)
 
-            Label(frame, text="{:>12}".format("Ціна"), font=("Courier", 12)).grid(row=3, column=0)
+            Label(frame, text="{:>12}".format("Ціна(USD)"), font=("Courier", 12)).grid(row=3, column=0)
             price_form.grid(row=3, column=1)
 
             Label(frame, text="{:>12}".format("Постачальник"), font=("Courier", 12)).grid(row=4, column=0)
@@ -163,7 +163,7 @@ class Commodity:
             Label(frame, text="{:>12}".format("Кількість"), font=("Courier", 12)).grid(row=2, column=0)
             description_form.grid(row=2, column=1)
 
-            Label(frame, text="{:>12}".format("Ціна"), font=("Courier", 12)).grid(row=3, column=0)
+            Label(frame, text="{:>12}".format("Ціна(USD)"), font=("Courier", 12)).grid(row=3, column=0)
             price_form.grid(row=3, column=1)
 
             Label(frame, text="{:>12}".format("Постачальник"), font=("Courier", 12)).grid(row=4, column=0)
@@ -246,7 +246,7 @@ class Commodity:
 
             frame.config(relief=RAISED, bd=3)
 
-            entity = "{:^4}{:^20}{:^20}{:^10}{:^15}".format("#", "Назва", "Кількість", "Ціна", "Продавець")
+            entity = "{:^4}{:^20}{:^20}{:^10}{:^15}".format("#", "Назва", "Кількість", "Ціна(USD)", "Продавець")
             Label(frame, text=entity, fg="red", bd=2, bg="lightgrey", font=("Courier", 12)).pack(side=TOP)
 
             for commodity in commodities:
@@ -349,7 +349,7 @@ class Commodity:
         except Exception as e:
             print(e.args)
 
-    def add_provider_to_db(self, name, email, path="db/database.db", table="Providers"):
+    def add_commodity_to_db(self, name, description, price, providerId, path="db/database.db", table="Commodities"):
 
         try:
             db = lite.connect(path)
@@ -359,13 +359,14 @@ class Commodity:
                 db.commit()
 
                 max_id = conn.fetchall()
-                user = (max_id[0][0] + 1, name, email)
+                user = (max_id[0][0] + 1, name, description, price, providerId)
 
-                conn.execute("INSERT INTO {} (Id,Name,Email) VALUES (?,?,?)".format(table), user)
+                conn.execute(
+                    "INSERT INTO {} (Id, Name, Amount, Price, ProviderId) VALUES (?,?,?,?,?)".format(table), user
+                )
 
         except Exception as e:
             print(e.args)
-
 
     def __del__(self):
         self.refresh_window()

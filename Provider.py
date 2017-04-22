@@ -20,7 +20,7 @@ class Provider:
         Інші методи даного класу створені задля взаємодії з БД. Їх назви говорять самі за себе.
     """
 
-    def __init__(self, master):
+    def __init__(self, master=None):
         # master - це кореневий фрейм, який містить усі інші елементи
         self.master = master
 
