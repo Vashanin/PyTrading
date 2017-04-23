@@ -9,5 +9,5 @@ Installing instructions:
     > $ git clone https://github.com/Vashanin/PyTrading
 4) Switch to the created dir
 5) Run in the console(or just double-click on index.py file)
-    > $ python3 index.py
+    > $ python3 Main.py
 6) Enjoy it
