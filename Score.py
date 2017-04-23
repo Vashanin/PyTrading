@@ -38,7 +38,6 @@ class Score:
             commodities = self.commodity.get_all_data_from_db()
 
             customer_phone = self.window_items["customer"].get()
-            print(customer_phone)
 
             current_customer = None
 
@@ -46,17 +45,23 @@ class Score:
                 if (customer[2] == customer_phone):
                     current_customer = customer
 
-            print(current_customer)
-
-            prices = {}
+            commodity_dict = {}
             for commodity in commodities:
-                prices[commodity[1]] = commodity[3]
+                commodity_dict[commodity[1]] = commodity
 
             sum = 0.0
             goods = []
             for entry in self.window_items["list_of_entries"]:
-                goods.append(entry.get())
-                sum += prices[entry.get()]
+                product = entry.get()
+                goods.append(product)
+                sum += commodity_dict[product][3]
+
+            for item in goods:
+                self.commodity.edit_commodity_in_db(id=commodity_dict[item][0],
+                                                    amount=(commodity_dict[item][2] - 1))
+                lst = list(commodity_dict[item])
+                lst[2] -= 1
+                commodity_dict[item] = tuple(lst)
 
             self.window_items["customer_frame"].pack_forget()
             self.window_items["customer_tool_bar"].pack_forget()

@@ -303,7 +303,7 @@ class Commodity:
         except Exception as e:
             print(e.args)
 
-    def edit_commodity_in_db(self, id, name, description, price, providerId, table="Commodities", path="db/database.db"):
+    def edit_commodity_in_db(self, id, name="без змін", amount="без змін", price="без змін", providerId=0, table="Commodities", path="db/database.db"):
         try:
             db = lite.connect(path)
             with db:
@@ -316,8 +316,8 @@ class Commodity:
                 if (name == "без змін"):
                     name = responce[0][1]
 
-                if (description == "без змін"):
-                    description = responce[0][2]
+                if (amount == "без змін"):
+                    amount = responce[0][2]
 
                 if (price == "без змін"):
                     price = responce[0][3]
@@ -327,7 +327,7 @@ class Commodity:
 
                 conn.execute(
                     "UPDATE {} SET Name = '{}', Amount = '{}', Price = '{}', ProviderId = '{}' WHERE Id = {}"
-                        .format(table, name, description, price, providerId, id)
+                        .format(table, name, amount, price, providerId, id)
                 )
         except Exception as e:
             print("Troubles with edit_commodity_in_db: " + e.args[0])
