@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507e2690-a82d-4657-ad0c-83512ff13a70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/PyTrading.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Commodity.py" afterPath="$PROJECT_DIR$/Commodity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer.py" afterPath="$PROJECT_DIR$/Customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Provider.py" afterPath="$PROJECT_DIR$/Provider.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Score.py" afterPath="$PROJECT_DIR$/Score.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/database.db" afterPath="$PROJECT_DIR$/db/database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PyTrading$Unnamed.coverage" NAME="Python 3.5 Coverage Results" MODIFIED="1492559303947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyTrading$Python_3_5.coverage" NAME="Python 3.5 Coverage Results" MODIFIED="1492895083726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyTrading$Python_3_5.coverage" NAME="Python 3.5 Coverage Results" MODIFIED="1492908884791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -56,8 +47,8 @@
       <file leaf-file-name="Score.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Score.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="378">
+              <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -65,14 +56,37 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Window.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Window.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#491#586#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Provider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Provider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="393">
+              <caret line="158" column="0" lean-forward="true" selection-start-line="149" selection-start-column="12" selection-end-line="158" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#2777#3922#0" expanded="false" />
+                <element signature="e#3961#5722#0" expanded="false" />
                 <element signature="e#9566#9967#0" expanded="false" />
                 <element signature="e#10062#10298#0" expanded="false" />
                 <element signature="e#10590#11125#0" expanded="false" />
@@ -735,29 +749,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#64#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todolist.txt" />
-    <entry file="file://$PROJECT_DIR$/Window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="false" />
-            <element signature="e#116#2017#0" expanded="false" />
-            <element signature="e#491#586#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Commodity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -805,25 +797,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
-          <folding>
-            <marker date="1492889590496" expanded="true" signature="113:135" ph="DROP TABLE C... " />
-            <marker date="1492889590496" expanded="true" signature="173:258" ph="CREATE TABLE... Commodities" />
-            <marker date="1492889590496" expanded="true" signature="338:422" ph="INSERT INTO Commodities... " />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Provider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="393">
+          <caret line="158" column="0" lean-forward="true" selection-start-line="149" selection-start-column="12" selection-end-line="158" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#2777#3922#0" expanded="false" />
+            <element signature="e#3961#5722#0" expanded="false" />
             <element signature="e#9566#9967#0" expanded="false" />
             <element signature="e#10062#10298#0" expanded="false" />
             <element signature="e#10590#11125#0" expanded="false" />
@@ -838,10 +827,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#491#586#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+          <folding>
+            <marker date="1492889590496" expanded="true" signature="113:135" ph="DROP TABLE C... " />
+            <marker date="1492889590496" expanded="true" signature="173:258" ph="CREATE TABLE... Commodities" />
+            <marker date="1492889590496" expanded="true" signature="338:422" ph="INSERT INTO Commodities... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Score.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        <state relative-caret-position="378">
+          <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
