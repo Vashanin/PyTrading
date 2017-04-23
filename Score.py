@@ -6,6 +6,29 @@ import tkinter.ttk as ttk
 
 
 class Score:
+    """
+        Клас Score відповідає за операції пов`язані з замовленнями. Тут присутні функції для генерування замовлення
+        поставки товарів від провайдерів, та для генерування замовлення для покупця.
+        
+        Також присутні функції для підтверждення надходження поставки від провайдерів.
+        
+        Функції:
+            
+        1)  self.init_customer_score - генерування початкового вікна для користувача, де обирається який товар бажає придбати
+                                  покупець
+            self.add_commodity_to_list - виведення на екран форми для додання нового товару та дії пов'язані з цим 
+            self.summarize_commodity - підтвердження замовлення, генерація 'чеку'
+    
+    
+        2)  self.init_provider_score - генерування початкового вікна, виведення форми для вибору провайдера, у якого
+                                       будемо замовляти продукцію
+            self.submit_provider - підтвердження вибору провайдера. Тепер можна обирати лише ті товари, які надаються
+                                       даним провайдером та зазначені в таблиці Commodities нашої БД
+            self.add_commodity_to_provider_order - додання нового товару до замовлення
+            self.make_provider_order - підтвердження замовлення
+    
+        3)  self.init_submit_order - генерування початкового вікна для підтвердження надходження поставок
+    """
     def __init__(self, master):
         self.master = master
 
@@ -15,6 +38,7 @@ class Score:
 
         self.window_items = {}
 
+    # функції для генерування замовлення користувача
     def add_commodity_to_list(self):
         try:
             frame = Frame(self.master, width=600, height=500)
@@ -118,6 +142,7 @@ class Score:
         except Exception as e:
             print("Troubles with init_customer_score: " + e.args[0])
 
+    # функції для генерування замовлення поставки товарів
     def add_commodity_to_provider_order(self):
         try:
             frame = Frame(self.master, width=600, height=500)
@@ -240,3 +265,7 @@ class Score:
             ttk.Separator(frame, orient=HORIZONTAL).grid(row=4, columnspan=3, sticky="ew")
         except Exception as e:
             print("Trouble with init_provider_score: " + e.args[0])
+
+    # функції для підтвердження поставки
+    def init_submit_order(self):
+        print("donothing")

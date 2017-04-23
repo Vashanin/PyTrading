@@ -22,6 +22,10 @@ class Window(Frame):
         for item in items:
             item.pack_forget()
 
+    def submit_order(self):
+        self.refresh_all()
+        self.score.init_submit_order()
+
     def make_customer_score(self):
         self.refresh_all()
         self.score.init_customer_score()
@@ -52,6 +56,7 @@ class Window(Frame):
         filemenu.add_separator()
         filemenu.add_command(label="Створити замовлення постачальнику", command=self.make_provider_score)
         filemenu.add_command(label="Створити рахунок клієнту", command=self.make_customer_score)
+        filemenu.add_command(label="Підтвердити поставку товарів", command=self.submit_order)
         filemenu.add_separator()
         filemenu.add_command(label="Вихід", command=self.client_exit)
         filemenu.config(font=("Courier", 10))
