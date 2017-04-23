@@ -8,7 +8,7 @@ Trading tool powered by Python and tkinter library.
 3) Run
     > $ git clone https://github.com/Vashanin/PyTrading
 4) Switch to the created dir
-5) Run in the console(or just double-click on index.py file)
+5) Run in the console(or just double-click on Main.py file)
     > $ python3 Main.py
 6) Enjoy it
 
