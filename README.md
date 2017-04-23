@@ -1,7 +1,7 @@
 # PyTrading
 Trading tool powered by Python and tkinter library.
 
-Installing instructions:
+*Installing instructions:*
 
 1) Check whether you have Python 3.5 interpreter installed on your PC
 2) Open Git Bash console at the dir, where you want to place this app
@@ -12,6 +12,6 @@ Installing instructions:
     > $ python3 Main.py
 6) Enjoy it
 
-Recommendations:
+*Recommendations:*
 1) Plz, don't leave tables without records - it can cause problems. It will be fixed in later versions.
 2) You must not touch code. Really.
