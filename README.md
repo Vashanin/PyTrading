@@ -1,5 +1,5 @@
 # PyTrading
-Trading tool powered by Python
+Trading tool powered by Python and tkinter library.
 
 Installing instructions:
 
