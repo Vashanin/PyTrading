@@ -134,10 +134,10 @@ class Commodity:
 
             Label(frame, text="{:>12}".format("#"), font=("Courier", 12)).grid(row=0, column=0)
 
-            box = ttk.Combobox(frame, font=("Courier", 11), width=43)
-            box['values'] = self.get_column_from_table_db(column="Id", table="Commodities")
-            box.current(0)
-            box.grid(row=0, column=1)
+            commodity_id = ttk.Combobox(frame, font=("Courier", 11), width=43)
+            commodity_id['values'] = self.get_column_from_table_db(column="Id", table="Commodities")
+            commodity_id.current(0)
+            commodity_id.grid(row=0, column=1)
 
             name_form = Entry(frame, width=40, font=("Courier", 12))
             name_form.insert(0, "без змін")
@@ -170,7 +170,7 @@ class Commodity:
             provider_form.grid(row=4, column=1)
 
             def change():
-                id = box.get()
+                id = commodity_id.get()
                 name = name_form.get()
                 description = description_form.get()
                 price = price_form.get()
@@ -349,7 +349,7 @@ class Commodity:
         except Exception as e:
             print(e.args)
 
-    def add_commodity_to_db(self, name, description, price, providerId, path="db/database.db", table="Commodities"):
+    def add_commodity_to_db(self, name, amount, price, providerId, path="db/database.db", table="Commodities"):
 
         try:
             db = lite.connect(path)
@@ -359,7 +359,7 @@ class Commodity:
                 db.commit()
 
                 max_id = conn.fetchall()
-                user = (max_id[0][0] + 1, name, description, price, providerId)
+                user = (max_id[0][0] + 1, name, amount, price, providerId)
 
                 conn.execute(
                     "INSERT INTO {} (Id, Name, Amount, Price, ProviderId) VALUES (?,?,?,?,?)".format(table), user
