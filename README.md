@@ -11,3 +11,7 @@ Installing instructions:
 5) Run in the console(or just double-click on index.py file)
     > $ python3 Main.py
 6) Enjoy it
+
+Recommendations:
+1) Plz, don't leave tables without records - it can cause problems. It will be fixed in later versions.
+2) You must not touch code. Really.
