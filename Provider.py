@@ -229,12 +229,17 @@ class Provider:
             db = lite.connect(path)
             with db:
                 conn = db.cursor()
-                conn.execute("SELECT MAX(Id) FROM {}".format(table))
-                db.commit()
+                id = 1
 
-                max_id = conn.fetchall()
-                user = (max_id[0][0] + 1, name, email)
+                try:
+                    conn.execute("SELECT MAX(Id) FROM {}".format(table))
+                    db.commit()
+                    max_id = conn.fetchall()
+                    id = max_id[0][0] + 1
+                except Exception as e:
+                    print("Inserting into empty table: " + table + " new index equals " + str(id))
 
+                user = (id, name, email)
                 conn.execute("INSERT INTO {} (Id,Name,Email) VALUES (?,?,?)".format(table), user)
 
         except Exception as e:

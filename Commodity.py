@@ -355,18 +355,24 @@ class Commodity:
             db = lite.connect(path)
             with db:
                 conn = db.cursor()
-                conn.execute("SELECT MAX(Id) FROM {}".format(table))
-                db.commit()
+                id = 1
+                try:
+                    conn.execute("SELECT MAX(Id) FROM {}".format(table))
+                    db.commit()
 
-                max_id = conn.fetchall()
-                user = (max_id[0][0] + 1, name, amount, price, providerId)
+                    max_id = conn.fetchall()
+                    id = max_id[0][0] + 1
+                except Exception as e:
+                    print("Inserting into empty table: " + table + " new index equals " + str(id))
+
+                user = (id, name, amount, price, providerId)
 
                 conn.execute(
                     "INSERT INTO {} (Id, Name, Amount, Price, ProviderId) VALUES (?,?,?,?,?)".format(table), user
                 )
 
         except Exception as e:
-            print(e.args)
+            print("Troubles with add_commodity_to_db: " + e.args[0])
 
     def __del__(self):
         self.refresh_window()
