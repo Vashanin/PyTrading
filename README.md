@@ -13,5 +13,4 @@ Trading tool powered by Python and tkinter library.
 6) Enjoy it
 
 *Recommendations:*
-1) Plz, don't leave tables without records - it can cause problems. It will be fixed in later versions.
-2) You must not touch code. Really.
+1) You must not touch code. Really.

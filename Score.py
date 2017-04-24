@@ -27,7 +27,7 @@ class Score:
             self.add_commodity_to_provider_order - додання нового товару до замовлення
             self.make_provider_order - підтвердження замовлення
     
-        3)  self.init_submit_order - генерування початкового вікна для підтвердження надходження поставок
+        3)  self.init_submit_order - генерування вікна для підтвердження надходження поставок
     """
     def __init__(self, master):
         self.master = master
@@ -300,6 +300,7 @@ class Score:
 
             frame.config(relief=RAISED, bd=3)
 
+            # виведення список товарів, що очікують поставок з таблиці OrderedCommodities
             entity = "{:^4}{:^20}{:^20}{:^10}{:^15}".format("#", "Назва", "Кількість", "Ціна(USD)", "Продавець")
             Label(frame, text=entity, fg="red", bd=2, bg="lightgrey", font=("Courier", 12)).pack(side=TOP)
 
